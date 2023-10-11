@@ -25,7 +25,7 @@ class UserController extends Controller
   */ {
         $validated = $request->validated();
 
-        if(count(User::all()) == 0){
+        if (count(User::all()) == 0) {
             $validated['admin'] = 1;
         }
 
@@ -35,9 +35,9 @@ class UserController extends Controller
             'email'      => $validated['email'],
             'lastlogin'  => now(),
             'created_at' => now(),
-            'admin' => $validated['admin']??0 /* si le champs n'existe pas, alors il mettra directement 0 dedans*/
+            'admin'      => $validated['admin'] ?? 0
+            /* si le champs n'existe pas, alors il mettra directement 0 dedans*/
         ]);
-
 
 
         return redirect()->route('login')->with('success', 'Bienvenue chez nous, vous pouvez désormais vous connecter');

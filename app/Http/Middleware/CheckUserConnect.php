@@ -11,14 +11,12 @@ class CheckUserConnect
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response) $next
      */
-    public function handle(Request $request, Closure $next): Response
-    {
-        if (session('userId')){
+    public function handle(Request $request, Closure $next): Response {
+        if (session('userId')) {
             return $next($request);
-        }
-        else{
+        } else {
             return redirect()->route('login');
         }
     }

@@ -34,7 +34,7 @@ Route::get('creation', [UserController::class, 'create'])->name('routecreate');
 
 Route::post('creation', [UserController::class, 'store']);
 
-Route::get('login', function (){
+Route::get('login', function () {
     return view('login');
 })->name('login');
 

@@ -8,5 +8,4 @@
 
     <h1>Bienvenue à vous !</h1>
 
-
 @endsection

@@ -9,11 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function authenticate(LoginUserRequest $request): RedirectResponse
-    {
+    public function authenticate(LoginUserRequest $request): RedirectResponse {
         $credentials = $request->validated();
 
-        if(Auth::attempt($credentials)){
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             $user = Auth::user();
 
@@ -24,7 +23,7 @@ class LoginController extends Controller
 
             session(['userId' => $user->id, 'admin' => $user->admin]);
 
-            return redirect()->route('profil',[$user->id])->with('success', 'Coucou '.$user->username.' !');
+            return redirect()->route('profil', [$user->id])->with('success', 'Coucou ' . $user->username . ' !');
         }
 
         return back()->withErrors([
@@ -34,8 +33,7 @@ class LoginController extends Controller
     }
 
 
-    public function logout(Request $request): RedirectResponse
-    {
+    public function logout(Request $request): RedirectResponse {
         Auth::logout();
 
         $userBye = UserController::getUserAll(session('userId'));
@@ -44,6 +42,6 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('welcome')->with('success', 'ByeBye '.$userBye->username.' !');
+        return redirect()->route('welcome')->with('success', 'ByeBye ' . $userBye->username . ' !');
     }
 }
