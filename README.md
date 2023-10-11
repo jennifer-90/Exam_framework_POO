@@ -1,6 +1,28 @@
-# Guide d'Installation d'un Projet Laravel depuis GitHub
+# GUIDE D'INSTALLATION DU PROJET LARAVEL DEPUIS CE REPOSITORY GITHUB
 
 Ce guide simple vous expliquera comment installer un projet Laravel depuis GitHub sur votre propre ordinateur. Suivez ces étapes pour réussir l'installation.
+
+
+## * * Prérequis * * 
+
+Avant d'exécuter ce projet Laravel, assurez-vous que les prérequis suivants sont satisfaits :
+
+1. **Serveur Local :** Vous aurez besoin d'un serveur local pour exécuter ce projet. Un exemple courant est WAMP (Windows, Apache, MySQL, PHP), mais vous pouvez utiliser d'autres alternatives telles que XAMPP ou MAMP en fonction de votre système d'exploitation.
+
+2. **Version Minimale de MySQL :** Assurez-vous que votre serveur local est compatible avec une version minimale de MySQL 8.0.33. Vous pouvez vérifier la version de MySQL en exécutant la commande suivante dans votre terminal :
+
+    ```shell
+    mysql --version
+    ```
+
+3. **Version Minimale de PHP :** Vérifiez que votre serveur dispose d'une version minimale de PHP 8.2 en exécutant la commande suivante dans votre terminal :
+
+    ```shell
+    php --version
+    ```
+
+Ces prérequis doivent être satisfaits avant de procéder à l'installation du projet Laravel. Assurez-vous que votre environnement de développement est configuré conformément à ces exigences pour un fonctionnement optimal.
+
 
 ## Étape 1 : Cloner le Projet
 
