@@ -9,12 +9,8 @@
 
         <thead class="table table-dark">
         <tr>
-            <th>ID</th>
-            <th>NOM</th>
-            <th>EMAIL</th>
-            <th>DERNIERE CONNEXION</th>
-            <th>STATUT ADMIN</th>
-            <th>CREATION DU COMPTE</th>
+            <th>CHAMPS</th>
+            <th>VOS INFORMATIONS</th>
         </tr>
         </thead>
 
